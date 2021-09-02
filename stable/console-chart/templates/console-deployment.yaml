@@ -139,9 +139,9 @@ spec:
             scheme: HTTPS
           failureThreshold: 1
           initialDelaySeconds: 10
-      {{- if .Values.pullSecret }}
+      {{- if .Values.global.pullSecret }}
       imagePullSecrets:
-      - name: {{ .Values.pullSecret }}
+      - name: {{ .Values.global.pullSecret }}
       {{- end }}
       {{- with .Values.hubconfig.nodeSelector }}
       nodeSelector:

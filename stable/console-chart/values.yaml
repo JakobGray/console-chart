@@ -12,9 +12,10 @@
 org: open-cluster-management
 
 global:
+  pullPolicy: Always
+  pullSecret: null
   imageOverrides:
     console: ""
-    pullPolicy: Always
 
 pullSecret: null
 arch:
